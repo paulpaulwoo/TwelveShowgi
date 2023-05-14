@@ -1,0 +1,44 @@
+<div class="page">
+  <div class="header">
+    <h1>Create an account</h1>
+  </div>
+  <div *ngIf="!createdAccount">
+    <form class="submissionForm" (ngSubmit)="onSubmit()">
+      <h2 class="Guideline">For username and password, please enter 8-15 characters with no spaces or backslashes.</h2>
+
+
+      <div class="specificationContainer">
+        <p class="specifications" *ngIf="showUsernameError">Username doesn't follow specifications</p>
+      </div>
+      <label class="inputLabel" for="user_name">Username: </label>
+      <input #user_name id="user_name" [(ngModel)]="username" placeholder="Username" name="user" (ngModelChange)="handleUsernameChange()" />
+      <div class="specificationContainer">
+        <p class="specifications" *ngIf="showPasswordError">Password doesn't follow specifications</p>
+      </div>
+      <label class="inputLabel" for="pass_word">Password: </label>
+      <input type="password" #pass_word id="pass_word" [(ngModel)]="password" placeholder="Password" name="pass" (ngModelChange)="handlePasswordChange()" />
+
+
+      <div class="specificationContainer">
+        <p class="specifications" *ngIf="showPasswordCheckError">Passwords do not match</p>
+      </div>
+      <label class="inputLabel" for="pass_word_check">Reenter password: </label>
+      <input type="password" #pass_word id="pass_word_check" [(ngModel)]="passwordCheck" placeholder="Password Reentry" name="check" (ngModelChange)="handlePasswordCheckChange()" />
+
+      <div class="specificationContainer">
+        <p class="specifications" *ngIf="showInvalidSubmissionError"> {{invalidSubmissionMessage}}</p>
+      </div>
+
+      <button class="beforeCreation" type="submit">Create Account</button>
+      <button class="beforeCreation" type="button" (click)="returnToLogin()">Back to login</button>
+
+    </form>
+  </div>
+  <div class="accountCreatedContainer" *ngIf="createdAccount">
+    <div class="accountCreatedAnnouncement">
+      <h1>You created an account!</h1>
+      <h3>Go back to the login page to log in.</h3>
+    </div>
+    <button (click)="returnToLogin()">Return to login page</button>
+  </div>
+</div>

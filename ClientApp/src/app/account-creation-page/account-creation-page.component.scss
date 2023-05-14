@@ -1,0 +1,93 @@
+@use '../globals';
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountCreatedContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 80vh;
+  background-color: antiquewhite;
+
+  button {
+    width: 15vw;
+    padding: 3vh;
+    margin: 3vh;
+    background-color: globals.$button-primary-color;
+    transition-duration: 0.4s;
+    font-size: 2vh
+  }
+
+  button:hover {
+    background-color: globals.$button-hover-color;
+    color: white;
+  }
+}
+
+.accountCreatedAnnouncement {
+    height: 30vh;
+}
+
+.header {
+    height:10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.submissionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 80vh;
+    background-color: antiquewhite;
+}
+
+.inputLabel {
+    
+}
+
+.specifications {
+  justify-content: center;
+  text-align: center;
+  height: 5vh;
+  width: 20vw;
+  color: red;
+}
+
+.specificationContainer {
+  height: 5vh;
+  width: 20vw;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+input {
+    height: 8vh;
+    width: 20vw;
+}
+
+.beforeCreation {
+  width: 15vw;
+  padding: 1vh;
+  margin: 1vh;
+  background-color: globals.$button-primary-color;
+  transition-duration: 0.4s;
+  font-size: 2vh
+}
+
+button:hover {
+  background-color: globals.$button-hover-color; /* Green */
+  color: white;
+}

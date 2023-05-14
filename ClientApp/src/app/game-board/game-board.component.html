@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="board" width="100%" height="100%">
+    <!--getTileSize(): Desired tile width / height. Scales with viewpoint-->
+    <g *ngFor="let row of squares; index as i"
+        [attr.x]="0" [attr.y]="i * getTileSize()">
+        <g *ngFor="let square of row"
+            [attr.x]="square.x * getTileSize()" [attr.y]="i * getTileSize()" class="tile" 
+            (click)="onSquareClick(square)">
+        <rect
+            [attr.x]="square.x * getTileSize()" [attr.y]="i * getTileSize()"
+            [attr.fill]="square.fill" class="tile">
+        </rect>
+        <image *ngIf="square.imageSrc !== ''"
+            class="piece" [attr.x]="square.x * getTileSize()" [attr.y]="i * getTileSize()"
+            [attr.width]="getTileSize()" [attr.height]="getTileSize()" 
+            [attr.xlink:href]="square.imageSrc">
+        </image>
+        </g>
+    </g>
+    
+</svg>

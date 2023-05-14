@@ -1,0 +1,42 @@
+<div class="divider">
+  <div class="left"></div>
+  <div class="page">
+    <div class="upper">
+      <div class="ruleDemonstration">
+        <h1>Pieces</h1>
+        <div class="pieceInfo">
+          <p>- All pieces in Twelve Showgi can only move one square per turn.</p>
+          <p>- King: can move in all directions.</p>
+          <p>- Rook:  can move forward, backward, left, and right.</p>
+          <p>- Bishop:  can move in four diagonal directions.</p>
+          <p>
+            - Pawn: can move only forward. Note that pawns can capture pieces directly in front of them, and can never move diagonally, unlike chess.
+            when a pawn reaches the end of the board, it promotes to a queen.
+          </p>
+          <p>- Queen: can move in every direction, <b>except the backward two diagonals</b>. </p>
+        </div>
+        <div class="boardInfo"><app-game-board class="board"></app-game-board></div>
+      </div>
+      <div class="introduction">
+        <h1>Rules</h1>
+        <p>- The front three tiles is your side.</p>
+        <p>- White goes first. One move per turn is allowed. If you capture a piece, you can use the piece against the opponent by placing it on the board when you wish.</p>
+        <p>- Placing down a captured piece also consumes a turn. You can't place a piece where a piece is already present, or the opponent's first three tiles.</p>
+        <p>- When you capture the opponent's queen, and wish to use it, you have to place it as a pawn.</p>
+        <p>- The game ends when a player captures the opponent's king, or when a player's king enters the opponent's first three tiles, and not get captured until the start of the next turn.</p>
+
+        <h1>Fun facts</h1>
+        <p>- This game was introduced in the Korean TV show "The Genius", and its origin is Animal Showgi from Japan.</p>
+        <p>- The pieces are not supposed to be chess pieces, but I did it because of convenience.</p>
+        <p>- Do not use SVG components. You will hate yourself.</p>
+      </div>
+    </div>
+    <div class="lower">
+      <div class="madeBy">
+        <h1>Developer Website:</h1> <a class="devPage" href="https://seungjoon-sj-woo.vercel.app/">Some....random....link...<br>that...makes...you....wanna....visit</a>
+      </div>
+      <button class="play" (click)="playButtonClick()">Get Started!</button>
+    </div>
+  </div>
+  <div class="right"></div>
+</div>

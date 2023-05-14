@@ -1,0 +1,22 @@
+<div class="login-page">
+    <div class="login-box">
+        <form (ngSubmit)="onSubmit()">
+
+            <label for="user_name">Username: </label>
+            <input #user_name id="user_name" [(ngModel)]="this.username" placeholder="Username" name="user" />
+
+        
+
+            <label for="pass_word">Password: </label>
+            <input type="password" #pass_word id="pass_word" [(ngModel)]="this.password" placeholder="Password" name="pass"/>
+
+
+            <button type="submit">Login</button>
+
+        </form>
+        <div>
+            <button class="accountCreation" (click)="accountCreationClick()">Create an account</button>
+        </div>
+        
+    </div>
+  </div>

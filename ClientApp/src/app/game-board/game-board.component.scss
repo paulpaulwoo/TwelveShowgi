@@ -1,0 +1,24 @@
+.board {
+    overflow: hidden;
+    background-color: black;
+}
+
+.tile {
+  width: calc(4.6vh + 2vh);
+  height: calc(4.6vh + 2vh);
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.piece {
+  width: calc(4.6vh + 2vh);
+  height: calc(4.6vh + 2vh);
+}
+
+
+.row {
+  width: calc(13.8vh + 6vh);
+  height: calc(4.6vh + 2vh);
+  display: block;
+}
+

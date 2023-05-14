@@ -1,0 +1,74 @@
+.login-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vw;
+    background-color: rgb(30, 110, 179);
+}
+
+.accountCreation {
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    align-items: center;
+}
+
+label {
+    width: 10vw;
+    padding: 1vw;
+}
+input {
+    width: 10vw;
+    padding: 1vw;
+}
+button {
+  width: 15vw;
+  padding: 1vh;
+  margin: 1vh;
+  transition-duration: 0.4s;
+}
+
+  button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+
+@media screen and (min-height: 100vw) {
+    .login-box {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    label {
+        width: 10vh;
+        padding: 1vh;
+    }
+    input {
+        width: 10vh;
+        padding: 1vh;
+    }
+    button {
+        width: 15vh;
+        padding: 1vh;
+        margin: 1vh;
+    }
+
+}
